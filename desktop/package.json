@@ -1,0 +1,38 @@
+{
+  "name": "sellhub-desktop",
+  "version": "0.1.0",
+  "description": "SellHub — единая панель продаж FunPay + Playerok (десктоп)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "author": "SellHub",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.sellhub.panel",
+    "productName": "SellHub",
+    "files": [
+      "main.js",
+      "index.html"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
+  }
+}

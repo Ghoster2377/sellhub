@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SellHub — панель продавца FunPay / Playerok</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230ea5e9'/><path d='M55 18 L32 55 h14 L44 82 L68 44 H53 Z' fill='white'/></svg>">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sky" aria-hidden="true">
+  <div class="planet p1"></div>
+  <div class="planet p2"></div>
+  <div class="planet p3"></div>
+</div>
+<div id="splash">
+  <div class="sp-badge">⚡</div>
+  <div class="sp-name">SellHub</div>
+  <div class="sp-sub">загружаем реальные данные площадок…</div>
+  <div class="sp-bar"><i></i></div>
+</div>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="logo-badge">⚡</div>
+      <div>
+        <div class="logo-name">SellHub</div>
+        <div class="logo-sub">панель продавца</div>
+      </div>
+    </div>
+    <nav id="nav"></nav>
+    <div class="side-foot">
+      <div id="side-accts"></div>
+      <div class="demo-chip" id="demo-chip">Подключение…</div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div class="view-title" id="view-title">Дашборд</div>
+      <div class="tb-chips" id="tb-chips"></div>
+      <div class="tb-right">
+        <div class="clock" id="clock">--:--:--</div>
+        <div class="icon-btn" data-act="refresh" title="Обновить данные с площадок">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+        </div>
+        <div class="bell-wrap">
+          <div class="icon-btn" data-act="bell" id="bell-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <div class="bell-count" id="bell-count">0</div>
+          </div>
+          <div class="bell-panel hidden" id="bell-panel"></div>
+        </div>
+      </div>
+    </header>
+    <div class="content" id="view"></div>
+  </div>
+</div>
+
+<div id="toasts"></div>
+<div class="modal-backdrop hidden" id="modal-backdrop"><div class="modal" id="modal"></div></div>
+
+<script src="app.js"></script>
+</body>
+</html>
